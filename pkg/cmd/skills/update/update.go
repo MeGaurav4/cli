@@ -97,7 +97,8 @@ func NewCmdUpdate(f *cmdutil.Factory, runF func(*UpdateOptions) error) *cobra.Co
 
 			With %[1]s--force%[1]s, re-downloads skills even when the remote version matches
 			the local tree SHA. This overwrites locally modified skill files with
-			their original content, but does not remove extra files added locally.
+			their original content and also removes extra files added locally,
+			so back those up first if you want to keep them.
 
 			In interactive mode, shows which skills have updates and asks for
 			confirmation before proceeding. With %[1]s--all%[1]s, updates without prompting.
